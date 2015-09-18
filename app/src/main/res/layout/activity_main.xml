@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/filerow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/download_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="File download URL"
+            android:text="http://192.168.1.15:9000/memory drops_10.mp3"
+            android:layout_toLeftOf="@+id/add"/>
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="+"
+            android:layout_alignParentRight="true"
+            />
+        </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filerow"
+        android:layout_above="@+id/download"
+        />
+
+    <!--<EditText-->
+        <!--android:id="@+id/local_path"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Local storage path" />-->
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="Download with Progress"
+        android:layout_above="@+id/progbar" />
+
+    <ProgressBar
+        android:id="@+id/progbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:progressDrawable="@drawable/bluebar"
+        android:max="100"
+        android:layout_above="@+id/stats1" />
+
+    <LinearLayout
+        android:id="@+id/stats1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stats2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/currentfilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="current filename: " />
+
+        <TextView
+            android:id="@+id/currentfilename_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stats2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/status"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/currentfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="current file: " />
+
+        <TextView
+            android:id="@+id/currentfile_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 0  /  0" />
+
+        <TextView
+            android:id="@+id/bytesread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="bytes read: " />
+
+        <TextView
+            android:id="@+id/bytesread_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="" />
+
+</RelativeLayout>
