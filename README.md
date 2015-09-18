@@ -19,7 +19,7 @@ If you just want to use HttpFileDownload in your project, you can get the single
 
 ###Single File
 You can download the source file from git and add it to your project using:
-  * https://github.com/maxpower-ndrd/HttpFileDownload/blob/master/app/src/main/java/com/mpmpbile/httpfiledownload/HttpFileDownloader.java
+  * https://github.com/maxpower-ndrd/HttpFileDownload/blob/master/app/src/main/java/com/mpndrd/httpfiledownload/HttpFileDownloader.java
 
 ###Android Project
 You can downlaod the project form GitHub using any of the following methods.
