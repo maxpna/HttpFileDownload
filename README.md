@@ -9,19 +9,19 @@
  1. [Downloading a Single File](#downloading-a-single-file)
  2. [Downloading Multiple Files](#downloading-multiple-files)
 
-##Summary
+## Summary
 This is a complete project showing the use of the HttpFileDownload object. The purpose of this object is to simplify downloading file(s) over http and saving them to disk. Important points:
   * All the work is done by the object HttpFileDownload.
   * All downloads are perfomed using the [okhttp](http://square.github.io/okhttp/ "okhttpd") library.
 
-##How to get HttpFileDownload
+## How to get HttpFileDownload
 If you just want to use HttpFileDownload in your project, you can get the single file and add it to your project. If you want to play around with it first, you can download the Android project.
 
-###Single File
+### Single File
 You can download the source file from git and add it to your project using:
   * https://github.com/maxpower-ndrd/HttpFileDownload/blob/master/app/src/main/java/com/mpndrd/httpfiledownload/HttpFileDownloader.java
 
-###Android Project
+### Android Project
 You can downlaod the project form GitHub using any of the following methods.
   * clone the repo, use the following command.
 ```
@@ -29,8 +29,8 @@ git clone https://github.com/maxpower-ndrd/HttpFileDownload.git
 ```
   * use the [Download Zip](https://github.com/maxpower-ndrd/HttpFileDownload/archive/master.zip) link from the project's [main page](https://github.com/maxpower-ndrd/HttpFileDownload)
 
-##How to Use
-###Downloading a Single File
+## How to Use
+### Downloading a Single File
 the following code shows you how to download a single file.
 
 ```
@@ -72,7 +72,7 @@ try {
 }
 ```
 
-###Downloading Multiple Files
+### Downloading Multiple Files
 The following code shows you how to download a list of files. For this you build a list of DownloadRequest objects and pass it to HttpFileDownlaod object.
 
 The following code uses a listview to get urls in the form of http://server/path/file.ext and to generate a list of DownloadRequest objects. URL.getFile() returns the path/file.ext portion of the url, and replaces /'s with -'s turns it into path-file.txt format. This is an example, in your own implementation choose/generate filenames that make sense for you.
